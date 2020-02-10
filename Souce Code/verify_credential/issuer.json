@@ -1,0 +1,14 @@
+{
+  "id":"http://www.kmitl.ac.th/issuer.json",
+  "name":"King Mongkut's Institute of Technology Ladkrabang",
+  "url":"http://www.kmitl.ac.th/en",
+  "email":"helpcenter@kmitl.ac.th",
+  "revocationList":"http://www.kmitl.ac.th/revocation.json",
+  "addressList": [
+    {
+      "address": "2MytmEDSkDQhbBckb6LoATd4n1cxRxgBtXP",
+      "created": "2019-10-11T17:30:52:350416Z",
+      "revoked": ""
+    }
+  ]
+}
