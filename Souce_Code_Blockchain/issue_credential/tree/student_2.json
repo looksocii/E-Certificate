@@ -1,0 +1,31 @@
+{
+  "credentialTree": [
+    {
+      "id": "urn:uuid:b168d150-1002-498d-8a48-b00beef93fb5",
+      "name": "blockcerts.json",
+      "targetHash": "60a921b9fde6e4c9cc143b780479ce9032323b063f19a199ee619a13c7f48e3c",
+      "child": []
+    },
+    {
+      "id": "urn:uuid:2489736c-9147-4f8f-ba20-12aceb665c07",
+      "name": "clr.json",
+      "targetHash": "616579ee958f569bacd86863f82464dbc78f796db735b31cd8c3f62c3bd738c3",
+      "child": [
+        "openbadges 101.json",
+        "openbadges 202.json"
+      ]
+    },
+    {
+      "id": "urn:uuid:9b50b837-ec70-4843-b44a-250697cefc9d",
+      "name": "openbadges 101.json",
+      "targetHash": "3dd92084304e046a40e888468ee8d6cf31b6942faca9fc9b4ee4705c78dd759b",
+      "child": []
+    },
+    {
+      "id": "urn:uuid:50421749-cdfb-455c-bbaa-7065e1fc5bc0",
+      "name": "openbadges 202.json",
+      "targetHash": "54b59d5613b740a87195f3cbd10da918a0373358a12c667259b2bf074c7ca7cf",
+      "child": []
+    }
+  ]
+}

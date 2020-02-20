@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Upload</h2>
+<form method="POST" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name="document" id="document" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+  <button type="submit"> Upload it </button>
+</form>
+
+<script>
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+   }
+
+   function drop_handler(ev) {
+      var x = document.getElementById("document").value;
+   }
+</script>
+
+{% endblock  %}
