@@ -1,26 +1,28 @@
 import os
 import zipfile
 from os.path import pardir
-from django.test import TestCase
-from django.utils.archive import extract
 
 
 # Create your tests here.
 def find():
     for root, dirs, files in os.walk(".", topdown=False):
         for name in files:
-            if (os.path.join(root, name) == ".\pytthon.zip"):
+            if (os.path.join(root, name) == ".\\test.zip"):
                 print("Found!", os.path.join(root, name))
                 return os.path.join(root, name)
         for name in dirs:
-            if (os.path.join(root, name) == ".\pytthon.zip"):
+            if (os.path.join(root, name) == ".\\test.zip"):
                 print("Found!", os.path.join(root, name))
                 return os.path.join(root, name)
 
-def AddZip():
+def Extract():
     data = zipfile.ZipFile(find(),'r')
+    ## read zipfile
+    filedata = []
+    for i in data.infolist():
+        filedata.append(i.filename)
+    print(filedata)
+    ## read zipfile
     data.extractall()
     data.printdir()
-    # data = data.read("tests.py")
-    # print(data)
-AddZip()
+Extract()
