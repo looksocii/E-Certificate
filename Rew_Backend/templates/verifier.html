@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+      </nav>
+
+    <div class="container">
+        <div class="row my-5">
+        <div class="col-6">
+            Content
+        </div>
+        <div class="col-6">
+            <form action="{% url 'verify_credential' %}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                <input type="file" name="verifyCredential" value=""  ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+              </form>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script>
+    function dragover_handler(ev) {
+      ev.preventDefault();
+      ev.dataTransfer.dropEffect = "move";
+    }
+  
+    function drop_handler(ev) {
+      var x = document.getElementById("document").value;
+    }
+  </script>
+</html>

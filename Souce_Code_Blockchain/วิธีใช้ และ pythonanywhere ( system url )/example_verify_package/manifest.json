@@ -1,0 +1,74 @@
+{
+  "manifest": {
+    "id": null,
+    "name": "Root",
+    "value": "790cf9aff8a9ad9825f49bbb951bb2e4d871f17b33cd83d2ca4036a7340d4a75",
+    "left": {
+      "id": null,
+      "name": null,
+      "value": "b1d15066831dc116cd329262211534f086108bc95d40a7a2503d3752367364a6",
+      "left": {
+        "id": null,
+        "name": null,
+        "value": "f463bdcc795d670bb666787efce4c9272ead4285fab926cda2f7bb5c1151fd6e",
+        "left": {
+          "id": null,
+          "name": null,
+          "value": "7577fa133bd3dff16e169b55c9775c6ea22e4e4c80b72d374233d450242b066d",
+          "left": {
+            "id": "urn:uuid:ed77279e-9505-4472-80f0-d1e4d01ea5f1",
+            "name": "openbadges 101.json",
+            "value": "87e185e1743f89b1d65458a355d2345c1620892d911013be7f1ab5b967b846c4",
+            "left": null,
+            "right": null
+          },
+          "right": {
+            "id": "urn:uuid:bceb91bc-df1a-4ffb-8c96-323d40bfc800",
+            "name": "openbadges 202.json",
+            "value": "bc2ddf36341c15f1e5237b9fbb73be67b0e77a0091afb3d6975b15cedc1e1c6b",
+            "left": null,
+            "right": null
+          }
+        },
+        "right": {
+          "id": "urn:uuid:38906424-e851-409b-8ef9-65c70b4820c4",
+          "name": "clr.json",
+          "value": "eadabc0d399efc7b65e45b3b2dc56a7a1b8f0b5c504d51359e52fb462cb1f618",
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "id": null,
+        "name": null,
+        "value": "442c4c3ac3600ef2366ee67bc20fd937c938581158279cba1a9d87c8588adc81",
+        "left": {
+          "id": "urn:uuid:1ae802a2-c641-4858-85e9-e210c04d78e8",
+          "name": "blockcerts.json",
+          "value": "98869aabb27030d4c3e1ec6ace97a6885de3d04ca4d849c39ea7f093b3ff37b2",
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "id": "urn:uuid:1ae802a2-c641-4858-85e9-e210c04d78e8",
+          "name": "blockcerts.json",
+          "value": "98869aabb27030d4c3e1ec6ace97a6885de3d04ca4d849c39ea7f093b3ff37b2",
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "id": null,
+      "name": null,
+      "value": "3fb9a6c05c76d09c42105c507ac8db3c38da4e0eda555d0cb4b2fc58a1957ebd",
+      "left": null,
+      "right": null
+    }
+  },
+  "signature": {
+    "txId": "324235e7ad99d264a30f71be24c92f3ca81e11f8422c0f0406c7155e91c39ef5",
+    "type": "BTCOpReturn",
+    "chain": "Bitcion/test3"
+  }
+}
