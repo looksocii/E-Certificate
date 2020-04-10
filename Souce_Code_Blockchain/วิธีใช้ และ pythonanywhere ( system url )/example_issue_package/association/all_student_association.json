@@ -1,0 +1,22 @@
+{
+	"blockcerts.json": {
+		"type": "Assertion/blockcerts",
+		"child": []
+	},
+	"clr.json": {
+		"type": "ExtendedTranscript/clr",
+		"child": ["openbadges 101.json","openbadges 202.json"]
+	},
+	"openbadges 101.json": {
+		"type": "Assertion/openbadges",
+		"child": []
+	},
+	"openbadges 202.json": {
+		"type": "Assertion/openbadges",
+		"child": []
+	},
+	"recipientProfile.json":{
+		"type": "person",
+		"child": ["blockcerts.json", "clr.json"]
+	}
+}
