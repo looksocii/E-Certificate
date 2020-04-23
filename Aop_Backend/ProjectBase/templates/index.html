@@ -15,38 +15,33 @@
             <button type="submit">Upload</button>
         </div>
     </form>
+
     {% if fileZip %}
-    <table class="table">
         <h3>{{ fileZip }}</h3>
-            <thead class="thead-dark">
-                <tr>
-                    <th>Root Directory</th>
-                    <th>Directorys</th>
-                    <th>Files</th>
-                </tr>
-            </thead>
-            <tbody>
             {% for root in root_dirs %}
+            <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Root Directory</th>
+                            {% for dir in dirs %}
+                                {% if root in dir %}
+                                    <th>{{ dir }}</th>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                <tbody>
                 <tr>
                     <td>{{ root }}</td>
-                    <td>
-                    {% for dir in dirs %}
-                        {% if root in dir %}
-                            <p>{{ dir }}</p>
-                        {% endif %}
-                    {% endfor %}
-                    </td>
-                    <td>
                     {% for file in files %}
                         {% if root in file %}
-                            <p>{{ file }}</p>
+                            <td>{{ file }}</td>
                         {% endif %}
                     {% endfor %}
-                    </td>
                 </tr>
+                </tbody>
+            </table>
             {% endfor %}
-            </tbody>
-    </table>
     {% endif %}
 </div>
 </body>

@@ -23,6 +23,8 @@ def upload(request):
                 r_dir = r_dir[0]
                 if r_dir not in root_dirs:
                     root_dirs.append(r_dir)
+
+
         for f in zip_f.namelist():
             zinfo = zip_f.getinfo(f)
             if(zinfo.is_dir()):
@@ -32,9 +34,12 @@ def upload(request):
                         num += 1
                 if num == 0:
                     dirs.append(f)
+
+
         for f in zip_f.namelist():
             if '.' in f:
                 files.append(f)
+        
         
         context['root_dirs'] = root_dirs
         context['dirs'] = dirs
