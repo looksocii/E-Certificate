@@ -1,0 +1,86 @@
+{
+  "manifest": {
+    "name": "Root",
+    "type": null,
+    "value": "5390d9f25af4d322251fca3642671d8a8e1983e8ca5ea0ac8c6f0881cfaa4c95",
+    "left": {
+      "name": null,
+      "type": null,
+      "value": "0x01a4b2495dfa7c299af20ae2f050cffcc5f481c2b946607caeaf6474cfd69e8d40",
+      "left": {
+        "name": null,
+        "type": null,
+        "value": "0x01f4ec8b762c4644fe54ef8f5f220309899295e1b152658bafb92bfea6ff292aae",
+        "left": {
+          "name": null,
+          "type": null,
+          "value": "0x0190337a76e835f884d62192df5994d8f41da940f904d8bcf9d536f3df8c5b5251",
+          "left": {
+            "name": null,
+            "type": null,
+            "value": "0x0156f6e13cc876f675c7f4ff09d06dac6e337d72ac63479a61b0efa9c230354027",
+            "left": {
+              "name": "openbadges 101.json",
+              "type": "Assertion/openbadges",
+              "value": "0x006ad3b32852b1cc6ee5d9bc5601d3de7dc645eb4a25140858192e13bb5b5780b0",
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "name": "openbadges 202.json",
+              "type": "Assertion/openbadges",
+              "value": "0x003689607b710a10ed2f58f81d040425eccd87dee8378f123ea1e2b15b59d10819",
+              "left": null,
+              "right": null
+            }
+          },
+          "right": {
+            "name": "clr.json",
+            "type": "ExtendedTranscript/clr",
+            "value": "0x007c39e88242a3b81306399a17feca38cb700acbab89809666ad0bdeed74f70b75",
+            "left": null,
+            "right": null
+          }
+        },
+        "right": {
+          "name": null,
+          "type": null,
+          "value": "0x018464b1d70e6ceff96ce7b44d40d1d14e23cd19988ae5f87b105aa19a7eff9bab",
+          "left": {
+            "name": "blockcerts.json",
+            "type": "Assertion/blockcerts",
+            "value": "0x000ecf61ce76210ac1e725810fbb979d31047d5cbc2515238d7538323c90f267b1",
+            "left": null,
+            "right": null
+          },
+          "right": {
+            "name": "blockcerts.json",
+            "type": "Assertion/blockcerts",
+            "value": "0x000ecf61ce76210ac1e725810fbb979d31047d5cbc2515238d7538323c90f267b1",
+            "left": null,
+            "right": null
+          }
+        }
+      },
+      "right": {
+        "name": "recipientProfile.json",
+        "type": "person",
+        "value": "0x00643220695ed155ae6ad677543fbd8d2400822307f68e795a9d0a428a7c68b0b2",
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "name": null,
+      "type": null,
+      "value": "0x014d9dddf42f3f4535960211751b9871dee037cd247b347397fac1d39f76993e35",
+      "left": null,
+      "right": null
+    }
+  },
+  "signature": {
+    "txId": "aa809bd60891a88abb23f7c6455db1496adf117faf1af93a8c52f4a4db54cad5",
+    "type": "BTCOpReturn",
+    "chain": "Bitcion/test3"
+  }
+}
