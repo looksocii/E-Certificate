@@ -1,48 +1,187 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
-<div class="container p-5">
-    <form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="file-upload-wrapper">
-            <input type="file" id="input-file-now" class="file-upload" name="document">
-            <button type="submit">Upload</button>
-        </div>
-    </form>
+<style>
+    .tree ul {
+        padding-top: 20px;
+        position: relative;
 
-    {% if fileZip %}
-        <h3>{{ fileZip }}</h3>
-            {% for root in root_dirs %}
-            <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Root Directory</th>
-                            {% for dir in dirs %}
-                                {% if root in dir %}
-                                    <th>{{ dir }}</th>
-                                {% endif %}
-                            {% endfor %}
-                        </tr>
-                    </thead>
-                <tbody>
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+    }
+
+    .tree li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        padding: 20px 5px 0 5px;
+
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+    }
+
+    .tree li::before,
+    .tree li::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 1px solid #ccc;
+        width: 50%;
+        height: 20px;
+    }
+
+    .tree li::after {
+        right: auto;
+        left: 50%;
+        border-left: 1px solid #ccc;
+    }
+
+    .tree li:only-child::after,
+    .tree li:only-child::before {
+        display: none;
+    }
+
+    .tree li:only-child {
+        padding-top: 0;
+    }
+
+    .tree li:first-child::before,
+    .tree li:last-child::after {
+        border: 0 none;
+    }
+
+    .tree li:last-child::before {
+        border-right: 1px solid #ccc;
+        border-radius: 0 5px 0 0;
+        -webkit-border-radius: 0 5px 0 0;
+        -moz-border-radius: 0 5px 0 0;
+    }
+
+    .tree li:first-child::after {
+        border-radius: 5px 0 0 0;
+        -webkit-border-radius: 5px 0 0 0;
+        -moz-border-radius: 5px 0 0 0;
+    }
+
+    .tree ul ul::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 1px solid #ccc;
+        width: 0;
+        height: 20px;
+    }
+
+    .tree li div {
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #666;
+        font-family: arial, verdana, tahoma;
+        font-size: 11px;
+        display: inline-block;
+
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+    }
+
+    .tree li div:hover,
+    .tree li div:hover+ul li div {
+        background: #c8e4f8;
+        color: #000;
+        border: 1px solid #94a0b4;
+    }
+
+    .tree li div:hover+ul li::after,
+    .tree li div:hover+ul li::before,
+    .tree li div:hover+ul::before,
+    .tree li div:hover+ul ul::before {
+        border-color: #94a0b4;
+    }
+</style>
+
+<body>
+    <div class="container p-5">
+        {% if fileZip %}
+        {% for root in root_dirs %}
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <td>{{ root }}</td>
-                    {% for file in files %}
-                        {% if root in file %}
-                            <td>{{ file }}</td>
-                        {% endif %}
-                    {% endfor %}
+                    <th scope="col">
+                        <p><b>ชื่อนักเรียนหรือรหัสนักเรียน : {{ root }}</b></p>
+                    </th>
                 </tr>
-                </tbody>
-            </table>
-            {% endfor %}
-    {% endif %}
-</div>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">
+                        <div class="tree text-center">
+                            <ul>
+                                <li>
+                                    <div>{{ root }}</div>
+                                    <ul>
+                                        {% for f in files %}
+                                        {% for k in f %}
+                                        {% if root in k %}
+                                        <li>
+                                            <div>{{ k|last }}</div>
+                                            {% if forloop.last %}
+                                            {% for l in final_files %}
+                                            {% for o in l %}
+                                            {% if root in o %}
+                                            {% if forloop.first %}
+                                            <ul>
+                                                {% endif %}
+                                                <li>
+                                                    <div>{{ o|last }}</div>
+                                                </li>
+                                                {% if forloop.last %}
+                                            </ul>
+                                            {% endif %}
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% endfor %}
+                                            {% endif %}
+                                        </li>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {% endfor %}
+        {% else %}
+        <form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-upload-wrapper">
+                <h4>Select The Zip File</h4>
+                <input type="file" id="input-file-now" class="file-upload" name="document">
+                <button type="submit">Upload</button>
+            </div>
+        </form>
+        {% endif %}
+    </div>
 </body>
+
 </html>
