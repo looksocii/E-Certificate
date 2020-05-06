@@ -1,0 +1,463 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>E-Certificate</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+  <ul>
+    <li><a href="#">E-Certificate<span></span><span></span></a></li>
+    <li><a href="issue001.html">issue<span></span><span></span></a></li>
+    <!-- <li><a href="#">Menu<span></span><span></span></a></li> -->
+
+  </ul>
+  <div class="container row">
+    <div class="col-6">
+      <div class="text">
+        Make the certificate trusted by E-certificate.
+        Check and easily manage your certificates.
+        <img class="logo" src="https://cdn1.iconfinder.com/data/icons/cv-resume-1/32/23-512.png" alt="">
+      </div>
+    </div>
+
+    <div class="col-6">
+
+      <div class="boxgod">
+        <form id="dropFileForm" action="http://localhost/upload.php" method="post" onsubmit="uploadFiles(event)">
+          <input type="file" name="files[]" id="fileInput" multiple onchange="addFiles(event)">
+
+          <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();"
+            ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();"
+            ondrop="overrideDefault(event);fileHoverEnd();
+                    addFiles(event);">
+            <i class="fa fa-download fa-5x"></i>
+            <br>
+            <br>
+            <br>
+            <span id="fileLabelText">
+              Click / Drop file Here
+              <img class="uploadpic"
+                src="https://icons.iconarchive.com/icons/graphicloads/long-shadow-documents/256/document-arrow-upload-icon.png"
+                alt="">
+            </span>
+            <br>
+            <span id="uploadStatus"></span>
+          </label>
+          <button>Upload</button>
+          
+          
+
+
+          <!--  -->
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+</body>
+<style>
+/* Outer */
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap'); */
+
+  .uploadpic {
+    width: 50px;
+  }
+
+  .progressLineardemoBasicUsage body {
+    padding: 20px;
+  }
+
+  .progressLineardemoBasicUsage h4 {
+    margin: 10px 0;
+  }
+
+  .progressLineardemoBasicUsage md-progress-linear {
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .progressLineardemoBasicUsage #loaders>md-switch {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+
+  .progressLineardemoBasicUsage #loaders>h5 {
+    margin-top: 0;
+  }
+
+  .progressLineardemoBasicUsage #loaders>p {
+    margin-right: 20px;
+    margin-bottom: 24px;
+  }
+
+  .progressLineardemoBasicUsage p.small {
+    font-size: 0.8em;
+    margin-top: -18px;
+  }
+
+  .progressLineardemoBasicUsage hr {
+    width: 100%;
+    margin-top: 20px;
+    border-color: rgba(221, 221, 177, 0.1);
+  }
+
+  .progressLineardemoBasicUsage p.small>code {
+    font-size: 0.8em;
+  }
+
+  .progressLineardemoBasicUsage .visible {
+    opacity: 1;
+    border: 2px solid white !important;
+  }
+
+  .progressLineardemoBasicUsage .container {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #aad1f9;
+    transition: opacity 1 linear;
+    border-top: 0px;
+  }
+
+  .progressLineardemoBasicUsage .bottom-block {
+    display: block;
+    position: relative;
+    background-color: rgba(255, 235, 169, 0.25);
+    height: 85px;
+    width: 100%;
+  }
+
+  .progressLineardemoBasicUsage .bottom-block>span {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 25px;
+    font-size: 0.9em;
+  }
+
+  /* .button {
+    box-sizing: border-box;
+    height: 25px;
+    width: 100px;
+    display: table;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+    -webkit-transition: background .5s;
+    transition: background .5s;
+    cursor: pointer;
+    margin-top: 6%;
+    margin-left: 50%;
+  }
+
+  .button span {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: red;
+    box-shadow: 0 0 0 3px #2D3142 inset;
+    background: transparent;
+  }
+
+  .button .away {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+  }
+
+  .button .over {
+    display: none;
+  }
+
+  .button:hover span.away {
+    display: none;
+  }
+
+  .button:hover span.over {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    box-shadow: none;
+  }
+
+  .button1:hover {
+    background: #2D3142;
+  } */
+  button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    width: 120px;
+    height: 60px;
+  }
+
+  button:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+  .text {
+    margin-top: -24%;
+    margin-left: 11%;
+    font-size: 40px;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  body {
+    background-image: url('polygon.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  .container {
+    margin-top: 15%;
+    font-size: 25px;
+    margin-right: 15%;
+    color: #000000;
+  }
+
+  .logo {
+    height: auto;
+    width: 40%;
+    margin-left: 50%;
+
+  }
+
+  ul {
+    margin-top: 1%;
+    padding: 0;
+    display: flex;
+  }
+
+  ul li {
+    list-style: none;
+    padding: 10px 40px;
+  }
+
+  ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: black;
+    position: relative;
+    padding: 5px;
+  }
+
+  ul li a:hover {
+    color: #191970;
+  }
+
+  ul li a span:first-child:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-top: 4px solid red;
+    border-left: 4px solid red;
+    transition: .2s;
+    opacity: 0;
+  }
+
+  ul li a span:first-child:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-top: 4px solid red;
+    border-right: 4px solid red;
+    transition: .2s;
+    opacity: 0;
+  }
+
+  ul li a span:last-child:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-bottom: 4px solid red;
+    border-left: 4px solid red;
+    transition: .2s;
+    opacity: 0;
+  }
+
+  ul li a span:last-child:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-bottom: 4px solid red;
+    border-right: 4px solid red;
+    transition: .2s;
+    opacity: 0;
+  }
+
+  ul li a:hover span:first-child:before {
+    top: -10px;
+    left: -10px;
+    opacity: 1;
+  }
+
+  ul li a:hover span:first-child:after {
+    top: -10px;
+    right: -10px;
+    opacity: 1;
+  }
+
+  ul li a:hover span:last-child:before {
+    bottom: -10px;
+    left: -10px;
+    opacity: 1;
+  }
+
+  ul li a:hover span:last-child:after {
+    bottom: -10px;
+    right: -10px;
+    opacity: 1;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  /* drop box */
+  .boxgod {
+    width: 150%;
+    height: pc;
+  }
+
+  #fileLabelText {
+    font-size: 100%;
+  }
+
+  #dropFileForm {
+    margin: 16px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  #dropFileForm #fileLabel {
+    background-color: black;
+    display: block;
+    padding: 16px;
+    color: aliceblue;
+
+    cursor: pointer;
+    height: 290px;
+    width: 450px;
+    border-style: dashed;
+    border-color: gold;
+    margin-left: 60px;
+    opacity: 0.9;
+  }
+
+  #dropFileForm #fileInput {
+    display: none;
+  }
+</style>
+<script>
+
+  var dropFileForm = document.getElementById("dropFileForm");
+  var fileLabelText = document.getElementById("fileLabelText");
+  var uploadStatus = document.getElementById("uploadStatus");
+  var fileInput = document.getElementById("fileInput");
+  var droppedFiles;
+
+  function overrideDefault(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  function fileHover() {
+    dropFileForm.classList.add("fileHover");
+  }
+
+  function fileHoverEnd() {
+    dropFileForm.classList.remove("fileHover");
+  }
+
+  function addFiles(event) {
+    droppedFiles = event.target.files || event.dataTransfer.files;
+    showFiles(droppedFiles);
+  }
+
+  function showFiles(files) {
+    if (files.length > 1) {
+      fileLabelText.innerText = files.length + " files selected";
+    } else {
+      fileLabelText.innerText = files[0].name;
+    }
+  }
+
+  function uploadFiles(event) {
+    event.preventDefault();
+    changeStatus("Uploading...");
+
+    var formData = new FormData();
+
+    for (var i = 0, file; (file = droppedFiles[i]); i++) {
+      formData.append(fileInput.name, file, file.name);
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function (data) {
+      //handle server response and change status of
+      //upload process via changeStatus(text)
+      console.log(xhr.response);
+    };
+    xhr.open(dropFileForm.method, dropFileForm.action, true);
+    xhr.send(formData);
+  }
+
+  function changeStatus(text) {
+    uploadStatus.innerText = text;
+  }
+
+// 
+
+
+</script>
+
+
+</html>
