@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block contain %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'issue001_css.css' %}">
+<form id="regForm" method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="tab">
+      <h1>STEP 1</h1><br>
+        <input type="file" name="document" id="fileInput" multiple onchange="addFiles(event)">
+        <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();"
+          ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+                    addFiles(event);">
+    </div>
+    <small class="font-italic form-text">* Select the certificate on your pc to upload and go to the next step.</small>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <!-- <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> -->
+        <button type="submit">Next</button>
+      </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step" style="background-color: #676767;"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+  <script src="{% static 'issue001_js.js' %}"></script>
+{% endblock contain %}
