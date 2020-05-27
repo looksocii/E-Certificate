@@ -1,0 +1,14 @@
+{
+	"blockcerts.json": {
+		"type": "Assertion/blockcerts",
+		"child": []
+	},
+	"clr.json": {
+		"type": "ExtendedTranscript/clr",
+		"child": []
+	},
+	"recipientProfile.json":{
+		"type": "person",
+		"child": ["blockcerts.json", "clr.json"]
+	}
+}

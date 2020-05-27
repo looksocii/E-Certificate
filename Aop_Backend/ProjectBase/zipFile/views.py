@@ -81,5 +81,4 @@ def upload(request):
         context['files'] = sub_files
         context['final_files'] = final_files
 
-
     return render(request, "index.html", context)
