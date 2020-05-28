@@ -17,6 +17,11 @@
 <img src="Photos/01.jpg"><br>
 
 <ul>
+	<li>หลังจากที่เลือกไฟล์และกด Upload แล้วเด้งไปหน้า Verify-Result จะแสดงผลว่า Certificate นี้เป็นของจริงและแสดงคาวมสัมพันธ์ของ Certificate ทั้งหมดที่เกี่ยวข้องกับ Certificate นั้นๆ</li>
+</ul>
+<img src="Photos/06.jpg"><br>
+
+<ul>
 	<li>หน้า Login เข้าใช้งานเว้บไซด์เพื่อทำการอัพโหลด certificate ลงบน Blockchain ซึ่งบน sidebar นั้นจะมีแถบปุ่ม ISSUE ที่จะทำการลิ้งค์ไปหน้าอัพโหลด Certificate (ถ้ายังไม่ login แล้วกดก็จะเด้งไปหน้า login เพื่อให้ login ก่อน) ซึ่งจะเข้าได้ก็ต้องทำการ Login ก่อน</li>
 </ul>
 <img src="Photos/02.jpg"><br>
