@@ -14,4 +14,9 @@
 <ul>
 	<li>หน้าหลักโดยหน้านี้จะใช้อัพโหลดไฟล์ zip (ไฟล์ Certificate) เพื่อตรวจสอบว่าเป็นของจริงหรือไม่</li>
 </ul>
-<img src="Photos/01.jpg">
+<img src="Photos/01.jpg"><br>
+
+<ul>
+	<li>หน้า Login ซึ่งบน sidebar นั้นจะมีแถบปุ่ม ISSUE ที่จะทำการลิ้งค์ไปหน้าอัพโหลด Certificate ซึ่งจะเข้าได้ก็ต้องทำการ Login ก่อน</li>
+</ul>
+<img src="Photos/02.jpg"><br>
