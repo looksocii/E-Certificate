@@ -1,6 +1,10 @@
+# E-Portfolio/E-Certificate with Blockchain
+<p>เป็นเว็บไซด์ในการตรวจสอบ Certificate ว่าเป็นของจริงที่ได้รับจากองค์กรต่างๆ นอกจากนี้ยังสามารถให้องค์กรหรือสถาบันต่างๆสามารถอัพโหลด Certificate ต้นฉบับ และบันทึกลงบนBlockchain ได้อีกด้วย สามารถป้องกันปัญหาการปลอมแปลง Certificate ต่างๆ</p>
+
 # แนวคิดเบื้องต้น (initial idea)
 <ol>
-	<li>ใช้ blockchain ในการบันทึก และ ตรวจสอบ certificates</li>
-	<li>ทาระบบเว็บ เพื่อให้บริการในการเผยแพร่ certificates และในการตรวจสอบ</li>
-	<li>รวบรวมหลาย ๆ certificates เพื่อเผยแพร่บน blockchain ในคราวเดียวกัน เพื่อลด transaction cost</li>
+	<li>ใช้ blockchain ในการบันทึกและตรวจสอบ certificates เพื่อให้มีความปลอดภัยและถูกต้องที่สุด</li>
+	<li>สร้างระบบเว็บเพื่อให้ความสะดวกและบริการในการเผยแพร่ certificates ใหม่ๆ และในการตรวจสอบ certificate ว่าเป็นของจริง</li>
+	<li>มีฟังก์ชันในการจัดการความสัมพันธ์ของ certificates ต่างๆในกรณีของนักเรียนคนเดียวและนักเรียนหลายคน</li>
+	<li>รวบรวมหลายๆ certificates เพื่อเผยแพร่บน blockchain ในคราวเดียวกัน เพื่อลด transaction cost</li>
 </ol>
