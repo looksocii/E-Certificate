@@ -17,7 +17,7 @@
 <img src="Photos/01.jpg"><br>
 
 <ul>
-	<li>หน้า Login ซึ่งบน sidebar นั้นจะมีแถบปุ่ม ISSUE ที่จะทำการลิ้งค์ไปหน้าอัพโหลด Certificate (ถ้ายังไม่ login แล้วกดก็จะเด้งไปหน้า login เพื่อให้ login ก่อน) ซึ่งจะเข้าได้ก็ต้องทำการ Login ก่อน</li>
+	<li>หน้า Login เข้าใช้งานเว้บไซด์เพื่อทำการอัพโหลด certificate ลงบน Blockchain ซึ่งบน sidebar นั้นจะมีแถบปุ่ม ISSUE ที่จะทำการลิ้งค์ไปหน้าอัพโหลด Certificate (ถ้ายังไม่ login แล้วกดก็จะเด้งไปหน้า login เพื่อให้ login ก่อน) ซึ่งจะเข้าได้ก็ต้องทำการ Login ก่อน</li>
 </ul>
 <img src="Photos/02.jpg"><br>
 
@@ -27,7 +27,7 @@
 <img src="Photos/03.jpg"><br>
 
 <ul>
-	<li>เมื่อกดแถบปุ่ม ISSUE จะเข้ามาหน้านี้ซึ่งเป็นหน้าที่ให้ผู้ใช้อัพโหลดไฟล์ zip (ไฟล์ certificate) ไม่ว่าจะลากไฟล์มาลงหรือกดเลือกได้ตามสะดวกเลย แล้วกดปุ่ม Next ก็จะเข้าสู่ Step ต่อไป</li>
+	<li>เมื่อกดแถบปุ่ม ISSUE (Login เข้ามาแล้ว) จะเข้ามาหน้านี้ซึ่งเป็นหน้าที่ให้ผู้ใช้อัพโหลดไฟล์ zip (ไฟล์ certificate) ไม่ว่าจะลากไฟล์มาลงหรือกดเลือกได้ตามสะดวกเลย แล้วกดปุ่ม Next ก็จะเข้าสู่ Step ต่อไป</li>
 </ul>
 <img src="Photos/04.jpg"><br>
 
@@ -35,3 +35,9 @@
 	<li>Step ต่อไปคือการตวรจสอบความสัมพันธ์ของ certificate ที่ผู้ใช้อัพโหลดขึ้นมาใน Step ที่ผ่านมา</li>
 </ul>
 <img src="Photos/05.jpg"><br>
+
+# References
+<ul>
+	<li><a href="https://opencerts.io/">opencerts.io</a></li>
+	<li><a href="https://www.blockcerts.org/">blockcerts.org</a></li>
+</ul>
